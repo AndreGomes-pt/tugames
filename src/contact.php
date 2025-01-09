@@ -107,7 +107,7 @@ if(isset($_SESSION['user_id'])){
                 </div>
               </div>
               <div class="col-lg-12">
-                <form id="contact-form" action="" method="post">
+                <form id="contact-form" action="contact.php" method="post">
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>
@@ -163,5 +163,23 @@ if(isset($_SESSION['user_id'])){
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.getElementById('form-submit').addEventListener('click', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Mensagem Enviada!',
+            text: 'Sua mensagem foi enviada com sucesso!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#007cf8',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('contact-form').submit();
+            }
+        });
+    });
+  </script>
   </body>
 </html>

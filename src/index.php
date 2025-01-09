@@ -312,6 +312,7 @@
                          text: "Obrigado por Subscrever.",
                          icon: "success",
                          button: "OK",
+                         confirmButtonColor: '#007cf8',
                      });
              });
          });

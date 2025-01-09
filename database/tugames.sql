@@ -230,7 +230,7 @@ CREATE TABLE `view_produtos` (
 --
 DROP TABLE IF EXISTS `carrinho_utilizador`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`valdirpr`@`localhost` SQL SECURITY DEFINER VIEW `carrinho_utilizador`  AS SELECT `c`.`id_carrinho` AS `id_carrinho`, `c`.`quantidade` AS `quantidade`, `p`.`nome` AS `nome_produto`, substring_index(`p`.`fotos`,',',1) AS `primeira_foto`, `p`.`preco` AS `preco`, `c`.`id_utilizador` AS `id_utilizador` FROM (`carrinho` `c` join `produtos` `p` on((`c`.`id_produto` = `p`.`id_produto`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `carrinho_utilizador`  AS SELECT `c`.`id_carrinho` AS `id_carrinho`, `c`.`quantidade` AS `quantidade`, `p`.`nome` AS `nome_produto`, substring_index(`p`.`fotos`,',',1) AS `primeira_foto`, `p`.`preco` AS `preco`, `c`.`id_utilizador` AS `id_utilizador` FROM (`carrinho` `c` join `produtos` `p` on((`c`.`id_produto` = `p`.`id_produto`))) ;
 
 -- --------------------------------------------------------
 
@@ -239,7 +239,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`valdirpr`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `historicocompras`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`valdirpr`@`localhost` SQL SECURITY DEFINER VIEW `historicocompras`  AS SELECT `u`.`nome` AS `nome_utilizador`, `e`.`id_encomenda` AS `id_encomenda`, `e`.`data_encomenda` AS `data_encomenda`, `p`.`nome` AS `nome_produto`, `ei`.`quantidade` AS `quantidade`, (`ei`.`quantidade` * `p`.`preco`) AS `preco_total` FROM (((`utilizadores` `u` join `encomendas` `e` on((`u`.`id_utilizador` = `e`.`id_utilizador`))) join `produtos_encomendas` `ei` on((`e`.`id_encomenda` = `ei`.`id_encomenda`))) join `produtos` `p` on((`ei`.`id_produto` = `p`.`id_produto`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `historicocompras`  AS SELECT `u`.`nome` AS `nome_utilizador`, `e`.`id_encomenda` AS `id_encomenda`, `e`.`data_encomenda` AS `data_encomenda`, `p`.`nome` AS `nome_produto`, `ei`.`quantidade` AS `quantidade`, (`ei`.`quantidade` * `p`.`preco`) AS `preco_total` FROM (((`utilizadores` `u` join `encomendas` `e` on((`u`.`id_utilizador` = `e`.`id_utilizador`))) join `produtos_encomendas` `ei` on((`e`.`id_encomenda` = `ei`.`id_encomenda`))) join `produtos` `p` on((`ei`.`id_produto` = `p`.`id_produto`))) ;
 
 -- --------------------------------------------------------
 
@@ -248,7 +248,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`valdirpr`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `view_produtos`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`valdirpr`@`localhost` SQL SECURITY DEFINER VIEW `view_produtos`  AS SELECT `p`.`id_produto` AS `id_produto`, `p`.`nome` AS `nome_produto`, `p`.`descricao` AS `descricao`, `p`.`preco` AS `preco`, `p`.`stock` AS `stock`, `p`.`fotos` AS `todas_fotos`, `c`.`id_categoria` AS `id_categoria`, `c`.`nome_categoria` AS `nome_categoria` FROM (`produtos` `p` join `categorias` `c` on((`p`.`id_categoria` = `c`.`id_categoria`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_produtos`  AS SELECT `p`.`id_produto` AS `id_produto`, `p`.`nome` AS `nome_produto`, `p`.`descricao` AS `descricao`, `p`.`preco` AS `preco`, `p`.`stock` AS `stock`, `p`.`fotos` AS `todas_fotos`, `c`.`id_categoria` AS `id_categoria`, `c`.`nome_categoria` AS `nome_categoria` FROM (`produtos` `p` join `categorias` `c` on((`p`.`id_categoria` = `c`.`id_categoria`))) ;
 
 --
 -- Índices para tabelas despejadas

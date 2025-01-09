@@ -6,7 +6,7 @@ Tugames é uma aplicação web para uma loja virtual de jogos, desenvolvida util
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-- **HTML5 e CSS3**: Para estruturação e design responsivo.
+- **HTML5 e CSS**: Para estruturação e design responsivo.
 - **JavaScript/jQuery**: Para interatividade e manipulação no front-end.
 - **PHP**: Para lógica de negócio no back-end.
 - **MySQL**: Para gestão e armazenamento de dados.
@@ -23,7 +23,7 @@ Tugames é uma aplicação web para uma loja virtual de jogos, desenvolvida util
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/seuusuario/tugames.git
+git clone https://github.com/AndreGomes-pt/tugames
 cd tugames
 ```
 
@@ -39,7 +39,7 @@ Certifique-se de ter um ambiente local de desenvolvimento como **XAMPP**, **WAMP
 - Importe o ficheiro SQL localizado em `/database/tugames.sql`.
 
 ### 4. Configurar o ficheiro de conexão
-No ficheiro de conexão (`config.php` ou semelhante), verifique se as credenciais estão configuradas corretamente:
+No ficheiro de conexão (`/src/dashboard/assets/db/db.php`), verifique se as credenciais estão configuradas corretamente:
 ```php
 <?php
 $host = 'localhost';
@@ -58,7 +58,7 @@ if ($conn->connect_error) {
 ### 5. Aceder ao site
 Abra o navegador e introduza o seguinte URL:
 ```
-http://localhost/tugames
+http://localhost/tugames/src/
 ```
 
 ---

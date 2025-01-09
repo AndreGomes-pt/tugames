@@ -264,7 +264,8 @@
                          title: 'Quantidade Inválida!',
                          text: 'Por favor, insira uma quantidade válida.',
                          icon: 'warning',
-                         confirmButtonText: 'OK'
+                         confirmButtonText: 'OK',
+                         confirmButtonColor: '#007cf8',
                      });
                      return;
                  }
@@ -283,14 +284,16 @@
                                  title: 'Sucesso!',
                                  text: response.message, 
                                  icon: 'success',
-                                 confirmButtonText: 'OK'
+                                 confirmButtonText: 'OK',
+                                 confirmButtonColor: '#007cf8',
                              });
                          } else {
                              Swal.fire({
                                  title: 'Erro!',
                                  text: response.message || 'Ocorreu um erro ao adicionar o produto ao carrinho.',
                                  icon: 'error',
-                                 confirmButtonText: 'OK'
+                                 confirmButtonText: 'OK',
+                                 confirmButtonColor: '#007cf8',
                              });
                          }
                      },
@@ -300,7 +303,8 @@
                              title: 'Erro!',
                              text: 'Ocorreu um erro ao adicionar ao carrinho.',
                              icon: 'error',
-                             confirmButtonText: 'OK'
+                             confirmButtonText: 'OK',
+                             confirmButtonColor: '#007cf8',
                          });
                      }
                  });

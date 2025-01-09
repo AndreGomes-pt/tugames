@@ -243,12 +243,24 @@
                      if (response.success) {
                          fetchCartItems(); 
                      } else {
-                        Swal.fire("Erro!", response.message, "error"); 
+                        Swal.fire({
+         title: "Erro!",
+         text: response.message,
+         icon: "error",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
                         fetchCartItems(); 
                      }
                  },
                  error: function() {
-                  Swal.fire("Erro!", 'Erro ao aumentar a quantidade.', "error"); 
+                  Swal.fire({
+         title: "Erro!",
+         text: "Erro ao aumentar a quantidade.",
+         icon: "error",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
                  }
              });
          };
@@ -267,12 +279,25 @@
                         if (response.success) {
                          fetchCartItems(); 
                      } else {
-                        Swal.fire("Erro!", response.message, "error"); 
+         
+                        Swal.fire({
+         title: "Erro!",
+         text: response.message,
+         icon: "error",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
                         fetchCartItems(); 
                      }
                      },
                      error: function() {
-                        Swal.fire("Erro!", 'Erro ao diminuir a quantidade.', "error"); 
+                        Swal.fire({
+         title: "Erro!",
+         text: "Erro ao diminuir a quantidade.",
+         icon: "error",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
                      }
                  });
              } else {
@@ -289,6 +314,8 @@
                  showCancelButton: true, 
                  confirmButtonText: "Sim, remover!",
                  cancelButtonText: "Não, cancelar",
+                 confirmButtonColor: '#d33',  
+                 cancelButtonColor: '#007cf8',
                  dangerMode: true,
              }).then((result) => {
                  if (result.isConfirmed) { 
@@ -299,14 +326,34 @@
                          dataType: 'json',
                          success: function(response) {
                              if (response.success) {
-                                 Swal.fire("Sucesso!", response.message, "success"); 
+                              Swal.fire({
+         title: "Sucesso!",
+         text: response.message,
+         icon: "success",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
+         
                                  fetchCartItems(); 
                              } else {
-                                 Swal.fire("Erro!", response.message, "error"); 
+                                 Swal.fire({
+         title: "Erro!",
+         text: response.message,
+         icon: "error",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
+         
                              }
                          },
                          error: function() {
-                             Swal.fire("Erro!", 'Erro ao remover o item do carrinho.', "error"); 
+                             Swal.fire({
+         title: "Erro!",
+         text: "Erro ao remover o item do carrinho.",
+         icon: "error",
+         confirmButtonText: "OK",
+         confirmButtonColor: "#007cf8" 
+         });
                          }
                      });
                  } 

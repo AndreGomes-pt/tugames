@@ -292,7 +292,7 @@ function obterCategorias($conn) {
                            </div>
                            <div class="form-group">
                               <label for="modalStockProduto">Stock</label>
-                              <input type="number" class="form-control" id="modalStockProduto" name="stock" required />
+                              <input type="number" class="form-control" id="modalStockProduto" name="stock"  min="0" required />
                            </div>
                            <div class="form-group">
                               <label for="modalImagensProduto">Imagens do Produto</label>
@@ -347,7 +347,7 @@ function obterCategorias($conn) {
                            </div>
                            <div class="form-group">
                               <label for="modalStockProduto">Stock</label>
-                              <input type="number" class="form-control" id="modalStockProduto" name="stock" required />
+                              <input type="number" class="form-control" id="modalStockProduto" name="stock" min="0" required />
                            </div>
                            <div class="form-group">
                               <label for="modalImagensProdutoAdicionar">Imagens do Produto</label>
