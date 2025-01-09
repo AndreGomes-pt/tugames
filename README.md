@@ -5,6 +5,13 @@ Tugames é uma aplicação web para uma loja virtual de jogos, desenvolvida util
 
 ---
 
+## Live Demo  
+Você pode verificar a live demo do projeto clicando no link abaixo:  
+
+👉 [Acesse a Live Demo](https://tugames.valdirprogramacoes.pt/)  
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 - **HTML5 e CSS**: Para estruturação e design responsivo.
 - **JavaScript/jQuery**: Para interatividade e manipulação no front-end.
