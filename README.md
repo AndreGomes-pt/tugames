@@ -8,7 +8,7 @@ Tugames é uma aplicação web para uma loja virtual de jogos, desenvolvida util
 ## Live Demo  
 Você pode verificar a live demo do projeto clicando no link abaixo:  
 
-👉 [Acesse a Live Demo](https://tugames.valdirprogramacoes.pt/)  
+👉 [Acesse a Live Demo](https://tugames.valdirprogramacoes.club/)  
 
 ---
 
