@@ -20,6 +20,12 @@ Você pode verificar a live demo do projeto clicando no link abaixo:
 
 ---
 
+##📌 Templates Utilizados
+- **Lugx Gaming**: Template utilizado para o frontend da loja.
+- **AdminLTE 3.2.0**: Utilizado para o painel de administração e gerenciamento de utilizadores.
+
+---
+
 ## 📂 Estrutura do Projeto
 - `/src`: Código-fonte principal da aplicação.
 - `/database/tugames.sql`: Script SQL para criar e configurar a base de dados.
