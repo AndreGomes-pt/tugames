@@ -20,7 +20,7 @@ Você pode verificar a live demo do projeto clicando no link abaixo:
 
 ---
 
-##📌 Templates Utilizados
+## 📌 Templates Utilizados
 - **Lugx Gaming**: Template utilizado para o frontend da loja.
 - **AdminLTE 3.2.0**: Utilizado para o painel de administração e gerenciamento de utilizadores.
 
